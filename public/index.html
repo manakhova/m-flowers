@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>M-flowers</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page__body">
+    <div class="page__container">
+      <header class="page__header header">
+        <div class="header__container">
+          <a class="header__logo" href="#">
+            <svg width="98" height="86">
+              <use xlink:href="#logo"></use>
+            </svg>
+          </a>
+          <ul class="header__nav">
+            <li class="header__item">
+              <a class="header__link" href="#">Магазины</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">Контакты</a>
+            </li>
+            <li class="header__item">
+              <a class="header__link" href="#">О нас</a>
+            </li>
+          </ul>
+          <fieldset class="header__language">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="language"
+              id="ru"
+              checked/>
+            <label class="header__language-option" for="ru">Ru</label>
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="language"
+              id="en"/>
+            <label class="header__language-option" for="en">En</label>
+          </fieldset>      
+          <ul class="header__actions">
+            <li class="header__item">
+              <a
+                class="header__button header__button--phone"
+                href="tel:tel:+36787547894">
+                +3 67 8754 7894
+              </a>
+            </li>
+            <li class="header__item">
+              <button
+                class="header__button header__button--enter"
+                type="button">
+                Войти
+              </button>
+            </li>
+            <li class="header__item">
+              <button class="header__button header__button--create" type="button">
+                Создать аккаунт
+              </button>
+            </li>
+          </ul>
+          <button class="header__menu-button" type="button"></button>
+        </div>
+      </header>
+      <main class="page__main main">
+        <h1 class="page__main-title">
+          M-flowers
+        </h1>
+        <section class="join">
+          <h2 class="join__title">
+            Мы будем рады сотрудничать с вами на платформе 
+            'Международной цветочной онлайн-площадки'!
+          </h2>
+          <p class="join__text">
+            Присоединяйтесь к нам и начните 
+            получать доход с бизнеса в первый месяц регистрации! 
+          </p>
+          <div class="join__actions">
+            <button class="join__button join__button--buy" type="button">
+              Начать покупать
+            </button>
+            <button class="join__button join__button--sell" type="button">
+              Начать продавать
+            </button>
+          </div>
+        </section>
+        <section class="start">
+          <div class="start__container">
+            <div class="start__info">
+              <h3 class="start__title">
+                Заполните форму и начните развивать свой бизнес прямо сейчас!
+              </h3>
+              <p class="start__text">
+                Регистрация на нашем сайте занимает несколько минут, 
+                просим ответить на все вопросы полностью и корректно! 
+                После подтверждения регистрации вы попадёте в систему, 
+                где большинство процессов автоматизированы, что сэкономит 
+                ваше время и деньги!
+              </p>
+            </div>
+            <form class="start__form" action="#" method="POST">
+              <div class="start__form-step" id="first-step">
+                <label>
+                Ваше имя
+                <input type="text" name="name" id="name" placeholder="Ваше имя">
+                </label>
+                <label>
+                  Название Компании
+                  <input type="text" name="company" id="company" placeholder="Название Компании">
+                </label>
+                <label>
+                  E-mail
+                  <input type="email" name="email" id="email" placeholder="E-mail">
+                </label>
+                <label>
+                  Номер телефона
+                  <input type="tel" name="tel" id="tel" placeholder="+7 (XXX) - XXX XX XX">
+                </label>
+                <label>
+                  Промокод
+                  <input type="text" name="promocode" id="promocode" placeholder="Промокод">
+                </label>
+                <button class="start__button start__button--next" type="button">Далее</button>
+              </div>
+              <div class="start__form-step" id="second-step">
+                <label>
+                  Пароль
+                  <input type="password" name="password" id="password" placeholder="Создайте пароль">
+                </label>
+                <label>
+                  Подтвердите пароль
+                  <input type="password" name="password-check" id="password-check" placeholder="Повторите пароль">
+                </label>
+                <p class="start__captcha">
+                  F4UK6
+                </p>
+                <div class="start__captcha-input">
+                  <label>
+                    Введите символы из картинки
+                    <input type="text" name="captcha" id="captcha" placeholder="Код из картинки">
+                  </label>
+                </div>
+                <div class="start__actions">
+                  <button class="start__button start__button--prev" type="button">
+                    Назад
+                  </button>
+                  <button class="start__button  start__button--submit" type="submit">
+                    Подтвердить
+                  </button>
+                </div>
+                <label class="start__checkbox">
+                  <input class="visually-hidden" type="checkbox" id="start__checkbox">
+                  Я даю согласие на обработку моих персональных данных и правовых документов
+                </label>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="page__footer footer">
+        <div class="footer__container">
+          <div class="footer__contacts">
+            <h4 class="footer__title">Наши офисы</h4>
+            <div class="footer__contacts-container">
+              <p class="footer__contacts-item">
+              Московский офис
+              <a href="tel:+74552678907">+7 455 267-89-07</a>
+              Берсеневский пер., д. 56, стр. 4,
+              6-й эт., Москва, 567754
+              </p>
+              <p class="footer__contacts-item">            
+                Ростовский офис
+                <a href="tel:+78788880167">+7 878 888-01-67</a>
+                Буденовский пр-т, д. 84, 6-й эт.,
+                Ростов-на-Дону, 679965
+              </p>
+            </div>
+          </div>
+          <div class="footer__nav">
+            <h4 class="footer__title">Мы в соц сетях</h4>
+            <ul class="footer__nav-list">
+              <li>
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <a href="#">Facebook</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__other">
+            <h4 class="footer__title">Свяжитесь с нами</h4>
+            <a class="footer__other-tel" href="tel:+36787547894">+3 67 8754 7894</a>
+            <a class="footer__other-email" href="mailto:mflowers@flo.com">mflowers@flo.com</a>
+            <a class="footer__other-email-button" href="mailto:mflowers@flo.com">
+              Написать
+              <img src="./img/photo/mail.png" width="18px" height="14px" alt="mail to">
+            </a>
+          </div>
+          <p class="footer__copyright">
+            Авторские права 2008-2022 
+            <a href="#">M-flowers.com</a> 
+          </p>
+        </div>
+      </footer>
+    </div>
+    <svg style="display: none">
+      <symbol id="logo" viewBox="0 0 98 86" fill="none">
+        <path d="M98 0H0V86H98V0Z" fill="url(#pattern0)"/>
+        <defs>
+          <pattern
+            id="pattern0"
+            patternContentUnits="objectBoundingBox"
+            width="1"
+            height="1">
+            <use
+              xlink:href="#image0_3_205"
+              transform="translate(-0.144231) scale(0.00451889 0.0052805)"/>
+          </pattern>
+        </defs>
+      </symbol>
+    </svg>
+    <script src="bundle.js"></script>
+  </body>
+</html>
