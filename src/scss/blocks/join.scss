@@ -4,6 +4,10 @@
   padding-block: 160px 290px;
   text-align: center;
 
+  @include tab {
+    padding: 180px 20px 200px;
+  }
+
   &__title {
     font-family: "Marmelad", "Arial", sans-serif;
     font-weight: 400;

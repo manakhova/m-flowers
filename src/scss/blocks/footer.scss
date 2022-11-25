@@ -8,6 +8,13 @@
     max-width: 1420px;
     margin: 0 auto;
     padding-block: 80px;
+
+    @include tab {
+      flex-wrap: wrap;
+      gap: 48px;
+      max-width: 100%;
+      padding: 32px 24px;
+    }
   }
 
   &__title {
@@ -17,9 +24,20 @@
     margin-bottom: 24px;
   }
 
+  &__contacts {
+    @include tab {
+      width: 60%;
+    }
+  }
+
   &__contacts-container {
     display: flex;
     gap: 40px;
+
+    @include tab {
+      flex-direction: column;
+      gap: 16px;
+    }
   }
 
   &__contacts-item,
@@ -35,6 +53,14 @@
         border-color: $olive;
         transition: 0.3s;
       }
+    }
+  }
+
+  &__nav {
+    font-size: 20px;
+
+    @include tab {
+      order: 1;
     }
   }
 
@@ -61,12 +87,17 @@
 
   &__other-email-button {
     font-weight: 600;
+    text-align: center;
     background-color: $m-yellow;
     color: $l-black;
     max-width: 172px;
     padding: 12px 32px;
     border-radius: 12px;
     transition: 0.3s;
+
+    @include tab {
+      max-width: 100%;
+    }
 
     &:hover,
     &:focus {
@@ -77,5 +108,14 @@
 
   &__copyright {
     display: none;
+
+    @include tab {
+      order: 2;
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      color: $d-gray;
+      width: 100%;
+    }
   }
 }

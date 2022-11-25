@@ -22,5 +22,9 @@
     background-image: url("/public/img/photo/bgr-1.png");
     background-position: center 0;
     background-repeat: no-repeat;
+
+    @include tab {
+      background-image: url("/public/img/photo/bgr-1-tab.png");
+    }
   }
 }
