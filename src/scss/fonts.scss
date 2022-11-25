@@ -67,3 +67,13 @@
     url("/public/fonts/RubikMarkerHatch-Regular.woff2") format("woff2"),
     url("/public/fonts/RubikMarkerHatch-Regular.woff") format("woff");
 }
+
+@font-face {
+  font-family: "PTSans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url("/public/fonts/PTSans-Regular.woff2") format("woff2"),
+    url("/public/fonts/PTSans-Regular.woff") format("woff");
+}

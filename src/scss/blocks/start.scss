@@ -1,0 +1,130 @@
+.start {
+  background-image: url("/public/img/photo/bgr-2.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding-block: 200px;
+
+  &__container {
+    display: flex;
+    gap: 80px;
+    max-width: 1140px;
+    background-color: $xl-yellow;
+    background-image: url("/public/img/photo/bgr-3.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    margin: 0 auto;
+    padding: 80px;
+  }
+
+  &__title {
+    font-family: "Marmelad", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+  }
+
+  &__text {
+    font-weight: 400;
+    padding-block: 40px;
+  }
+
+  &__form-step {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: 500;
+    font-size: 14px;
+
+    input {
+      background-color: $l-yellow;
+      padding: 16px 8px;
+      border-radius: 6px;
+      width: 320px;
+      transition: 0.3s;
+
+      &:hover {
+        box-shadow: 0px 0px 10px 1px rgba(142, 130, 92, 0.3);
+        transition: 0.3s;
+      }
+
+      &:focus {
+        background-color: $xl-yellow;
+        border: 1px solid $olive;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__button {
+    flex-grow: 1;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: $m-yellow;
+    padding: 16px;
+    border-radius: 12px;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 10px 1px rgba(142, 130, 92, 0.3);
+      transition: 0.3s;
+    }
+
+    &--prev {
+      background-color: $l-gray;
+    }
+  }
+
+  &__captcha {
+    font-family: "RubikMarkerHatch", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    text-align: center;
+    color: $l-yellow;
+    padding: 33px;
+    background-color: $m-gray;
+    border-radius: 12px;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 9px;
+  }
+
+  &__checkbox {
+    cursor: pointer;
+    position: relative;
+    font-family: "PTSans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 250px;
+    padding-left: 30px;
+
+    label::before {
+      position: absolute;
+      content: "";
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: $emerald;
+      border-radius: 4px;
+    }
+
+    input:checked + label::after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 4px;
+      width: 10px;
+      height: 7px;
+      background-image: url("/public/img/svg/check.svg");
+    }
+  }
+}

@@ -1,3 +1,81 @@
 .footer {
+  background-color: $l-black;
+  color: $xl-yellow;
 
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-block: 80px;
+  }
+
+  &__title {
+    font-family: "Marmelad", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__contacts-container {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__contacts-item,
+  &__nav {
+    max-width: 275px;
+
+    a {
+      display: block;
+
+      &:hover,
+      &:focus {
+        color: $m-yellow;
+        border-color: $olive;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  &__nav-list,
+  &__other-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__other-tel {
+    display: block;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+
+    &:hover,
+    &:focus {
+      color: $m-yellow;
+      border-color: $olive;
+      transition: 0.3s;
+    }
+  }
+
+  &__other-email-button {
+    font-weight: 600;
+    background-color: $m-yellow;
+    color: $l-black;
+    max-width: 172px;
+    padding: 12px 32px;
+    border-radius: 12px;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 10px 1px rgba(142, 130, 92, 0.9);
+      transition: 0.3s;
+    }
+  }
+
+  &__copyright {
+    display: none;
+  }
 }

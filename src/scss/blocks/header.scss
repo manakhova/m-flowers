@@ -1,3 +1,61 @@
 .header {
-  
+  //background-color: $xl-yellow;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-block: 20px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__language {
+    display: none;
+  }
+
+  &__menu-button {
+    display: none;
+  }
+
+  &__button {
+    background-color: transparent;
+    font-weight: 500;
+
+    &--phone {
+      font-family: "Roboto", "Arial", sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &--create {
+      padding: 14px 30px;
+      border: 1px solid black;
+      border-radius: 12px;
+    }
+  }
+
+  a,
+  button {
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $olive;
+      border-color: $olive;
+      transition: 0.3s;
+    }
+  }
 }

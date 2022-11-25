@@ -1,11 +1,12 @@
 .page {
   height: 100%;
+  font-weight: 500;
   font-size: 18px;
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
 
   &__body {
-    //overflow-x: hidden;
+    overflow-x: hidden;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     min-height: 100%;
@@ -18,5 +19,8 @@
     max-width: 1920px;
     width: 100%;
     margin: 0 auto;
+    background-image: url("/public/img/photo/bgr-1.png");
+    background-position: center 0;
+    background-repeat: no-repeat;
   }
 }
