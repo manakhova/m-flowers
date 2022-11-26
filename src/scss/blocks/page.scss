@@ -5,6 +5,11 @@
   font-family: "Raleway", "Arial", sans-serif;
   line-height: 21px;
 
+  @include mob {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
   &__body {
     overflow-x: hidden;
     display: grid;
@@ -25,6 +30,10 @@
 
     @include tab {
       background-image: url("/public/img/photo/bgr-1-tab.png");
+    }
+
+    @include mob {
+      background-image: url("/public/img/photo/bgr-1-mob.png");
     }
   }
 }

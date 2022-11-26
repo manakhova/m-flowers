@@ -7,13 +7,19 @@
     justify-content: space-between;
     max-width: 1420px;
     margin: 0 auto;
-    padding-block: 80px;
+    padding: 80px 10px;
 
     @include tab {
       flex-wrap: wrap;
       gap: 48px;
       max-width: 100%;
       padding: 32px 24px;
+    }
+
+    @include mob {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding: 32px 20px;
     }
   }
 
@@ -27,6 +33,10 @@
   &__contacts {
     @include tab {
       width: 60%;
+    }
+
+    @include mob {
+      min-width: 275px;
     }
   }
 
@@ -61,6 +71,10 @@
 
     @include tab {
       order: 1;
+    }
+
+    @include mob {
+      order: 0;
     }
   }
 
@@ -99,6 +113,10 @@
       max-width: 100%;
     }
 
+    @include mob {
+      max-width: 172px;
+    }
+
     &:hover,
     &:focus {
       box-shadow: 0px 0px 10px 1px rgba(142, 130, 92, 0.9);
@@ -117,5 +135,9 @@
       color: $d-gray;
       width: 100%;
     }
+
+    @include mob {
+      font-size: 12px;
+    } 
   }
 }
