@@ -222,7 +222,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
     top: 115px;
     left: 0;
     width: 90%;
@@ -231,6 +231,7 @@
     border-bottom-right-radius: 12px;
 
     @include mob {
+      gap: 80px;
       top: 55px;
       padding: 20px;
     }
