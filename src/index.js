@@ -23,3 +23,11 @@ prevButton.addEventListener("click", () => {
   firstStep.style.display = "flex";
   secondStep.style.display = "none";
 });
+
+const navigation = header.querySelector(".header__nav");
+const menuButton = header.querySelector(".header__menu-button");
+
+menuButton.addEventListener('click', () => {
+  header.classList.toggle("menuOpened");
+  menuButton.classList.toggle("closeButton");
+})

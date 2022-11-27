@@ -2,7 +2,6 @@
   position: fixed;
   max-width: 1920px;
   width: 100%;
-  transition: 0.3s;
 
   &__container {
     display: flex;
@@ -38,6 +37,16 @@
 
     @include tab {
       display: none;
+    }
+  }
+
+  &__item {
+    &--mob {
+      display: none;
+
+      @include tab {
+        display: block;
+      }
     }
   }
 
@@ -198,4 +207,68 @@
   background-color: $xl-yellow;
   box-shadow: 0px 5px 15px 7px rgb(255 251 237 / 100%);
   transition: 0.3s;
+
+  &.menuOpened {
+    box-shadow: none;
+  }
+}
+
+.menuOpened {
+  background-color: $m-yellow;
+  transition: 0s;
+  z-index: 1;
+
+  .header__nav {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    top: 115px;
+    left: 0;
+    width: 90%;
+    padding: 40px;
+    background-color: $m-yellow;
+    border-bottom-right-radius: 12px;
+
+    @include mob {
+      top: 55px;
+      padding: 20px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .header__button--enter {
+      padding: 0;
+      display: block;
+    }
+
+    .header__button--create {
+      display: block;
+    }
+  }
+}
+
+.closeButton.header__menu-button {
+  span {
+    background-color: $m-yellow;
+
+    &::before {
+      transform: rotate(45deg);
+      width: 100%;
+    }
+
+    &::after {
+      top: 8px;
+      transform: rotate(-45deg);
+      width: 100%;
+
+      @include mob {
+        top: 6px;
+      }
+    }
+  }
 }
