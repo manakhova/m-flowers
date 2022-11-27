@@ -1,22 +1,25 @@
 .header {
   position: fixed;
+  max-width: 1920px;
   width: 100%;
   transition: 0.3s;
 
   &__container {
     display: flex;
-    justify-content: space-between;
+    gap: 16.4%;
     align-items: center;
     max-width: 1420px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding-block: 20px;
 
     @include tab {
+      gap: 9px;
       max-width: 100%;
       padding: 20px;
     }
 
     @include mob {
+      gap: 15px;
       padding: 8px 20px;
     }
   }
@@ -30,6 +33,7 @@
 
   &__nav {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
 
     @include tab {
@@ -39,15 +43,24 @@
 
   &__actions {
     display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
     align-items: center;
-    gap: 10px;
+    gap: 36px;
+
+    @include mob {
+      gap: 0;
+    }
   }
 
   &__language {
     display: none;
 
     @include tab {
-      display: block;
+      display: flex;
+      gap: 8px;
+      padding: 0 15px;
+      font-size: 20px;
       border: none;
 
       label {
@@ -56,9 +69,15 @@
       }
 
       input:checked + label {
+        gap: 6px;
         font-weight: 500;
         color: $l-black;
       }
+    }
+
+    @include mob {
+      font-size: 16px;
+      padding: 0;
     }
   }
 
@@ -78,9 +97,9 @@
       span::after {
         display: block;
         position: absolute;
-        top: 11px;
+        top: 10.5px;
         left: 7px;
-        width: 65%;
+        width: 63%;
         height: 2px;
         background-color: $l-black;
         border-radius: 2px;
@@ -88,15 +107,15 @@
 
       span::before {
         content: "";
-        top: 9px;
+        top: 8px;
         width: 75%;
         left: 0px;
       }
 
       span::after {
         content: "";
-        top: 18px;
-        width: 60%;
+        top: 17px;
+        width: 50%;
         left: 0px;
       }
 
@@ -107,6 +126,19 @@
           background-color: $olive;
           transition: 0.3s;
         }
+      }
+    }
+
+    @include mob {
+      width: 32px;
+      height: 36px;
+
+      span::before {
+        top: 6px;
+      }
+
+      span::after {
+        top: 12px;
       }
     }
   }
@@ -123,10 +155,12 @@
 
       @include tab {
         text-shadow: none;
+        margin-right: 6px;
       }
 
       @include mob {
         font-size: 16px;
+        margin-right: 25px;
       }
     }
 

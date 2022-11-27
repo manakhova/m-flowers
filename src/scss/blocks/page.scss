@@ -30,10 +30,12 @@
 
     @include tab {
       background-image: url("/public/img/photo/bgr-1-tab.png");
+      background-position: 66.5% 77px;
     }
 
     @include mob {
       background-image: url("/public/img/photo/bgr-1-mob.png");
+      background-position: 70% 28px;
     }
   }
 }

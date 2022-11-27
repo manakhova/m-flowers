@@ -7,19 +7,21 @@
     justify-content: space-between;
     max-width: 1420px;
     margin: 0 auto;
-    padding: 80px 10px;
+    padding-block: 85px;
 
     @include tab {
       flex-wrap: wrap;
-      gap: 48px;
+      justify-content: flex-start;
+      gap: 52px 41px;
       max-width: 100%;
-      padding: 32px 24px;
+      padding: 37px 24px;
     }
 
     @include mob {
       flex-direction: column;
       flex-wrap: nowrap;
-      padding: 32px 20px;
+      gap: 56px;
+      padding: 38px 20px;
     }
   }
 
@@ -27,7 +29,11 @@
     font-family: "Marmelad", "Arial", sans-serif;
     font-weight: 400;
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 29px;
+
+    @include mob {
+      margin-bottom: 28px;
+    }
   }
 
   &__contacts {
@@ -47,6 +53,11 @@
     @include tab {
       flex-direction: column;
       gap: 16px;
+    }
+
+    @include mob {
+      font-size: 18px;
+      line-height: 21px;
     }
   }
 
@@ -78,11 +89,32 @@
     }
   }
 
+  &__other {
+    @include tab {
+      flex-grow: 1;
+      width: 30%;
+    } 
+
+    @include mob {
+      width: 100%;
+    }
+  }
+
   &__nav-list,
   &__other-container {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 17px;
+
+    @include mob {
+      gap: 21px;
+    }
+  }
+
+  &__other-container {
+    @include mob {
+      gap: 20px;
+    }  
   }
 
   &__other-tel {
@@ -99,18 +131,23 @@
     }
   }
 
+  &__other-email {
+    font-size: 20px;
+  }
+
   &__other-email-button {
     font-weight: 600;
+    font-size: 16px;
     text-align: center;
     background-color: $m-yellow;
     color: $l-black;
     max-width: 172px;
-    padding: 12px 32px;
+    padding: 11px 32px;
     border-radius: 12px;
     transition: 0.3s;
 
     @include tab {
-      max-width: 100%;
+      max-width: 300px;
     }
 
     @include mob {
@@ -122,22 +159,31 @@
       box-shadow: 0px 0px 10px 1px rgba(142, 130, 92, 0.9);
       transition: 0.3s;
     }
+
+    img {
+      position: relative;
+      left: 3px;
+      top: 3px;
+    }
   }
 
   &__copyright {
     display: none;
 
     @include tab {
+      position: relative;
+      top: -7px;
       order: 2;
       display: block;
       font-weight: 400;
-      font-size: 14px;
+      font-size: 12px;
       color: $d-gray;
       width: 100%;
     }
 
     @include mob {
+      top: -11px;
       font-size: 12px;
-    } 
+    }
   }
 }

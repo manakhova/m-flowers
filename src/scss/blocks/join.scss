@@ -1,15 +1,15 @@
 .join {
   max-width: 887px;
   margin: 0 auto;
-  padding-block: 160px 290px;
+  padding-block: 295px 291px;
   text-align: center;
 
   @include tab {
-    padding: 180px 20px 200px;
+    padding: 187px 20px 206px;
   }
 
   @include mob {
-    padding: 150px 20px;
+    padding: 153px 20px 150px;
     max-width: 600px;
   }
 
@@ -17,7 +17,23 @@
     font-family: "Marmelad", "Arial", sans-serif;
     font-weight: 400;
     font-size: 56px;
-    line-height: 66px;
+    line-height: 66.5px;
+
+    span {
+      display: block;
+
+      &:last-of-type {
+        display: none;
+      }
+
+      @include mob {
+        display: none;
+
+        &:last-of-type {
+          display: block;
+        }
+      }
+    }
 
     @include mob {
       font-size: 24px;
@@ -31,7 +47,11 @@
     line-height: 30px;
     max-width: 700px;
     margin: 0 auto;
-    padding-block: 40px 58px;
+    padding-block: 42px 58px;
+
+    @include tab {
+      padding-block: 44px 60px;
+    }
 
     @include mob {
       font-size: 16px;
@@ -53,8 +73,10 @@
 
   &__button {
     font-weight: 600;
+    line-height: 18px;
+    max-width: 300px;
     background-color: $m-yellow;
-    padding: 22px 34px;
+    padding: 24px 34px;
     border-radius: 12px;
     transition: 0.3s;
 
@@ -63,8 +85,19 @@
       padding: 12px;
     }
 
+    &--buy {
+      @include mob {
+        padding: 7px;
+      }
+    }
+
     &--sell {
       background-color: $l-gray;
+      padding: 24px 42px;
+
+      @include mob {
+        padding: 12px 2px;
+      }
     }
 
     &:hover,

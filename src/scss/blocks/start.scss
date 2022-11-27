@@ -1,15 +1,18 @@
 .start {
   background-image: url("/public/img/photo/bgr-2.png");
-  background-position: center bottom;
+  background-position: center 2px;
   background-repeat: no-repeat;
-  padding-block: 200px;
+  padding-block: 202px 200px;
 
   @include tab {
-    padding: 40px;
+    background-image: url("/public/img/photo/bgr-2-tab.png");
+    background-size: 100%;
+    padding: 42px 40px 39px;
   }
 
   @include mob {
-    padding: 20px;
+    background-size: 990px;
+    padding: 22px 20px 20px;
   }
 
   &__container {
@@ -25,7 +28,7 @@
 
     @include tab {
       flex-direction: column;
-      gap: 18px;
+      gap: 16px;
       background-image: none;
       padding: 32px;
       max-width: 800px;
@@ -62,23 +65,123 @@
   &__form-step {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 17.5px;
 
     @include tab {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 18px 45px;
     }
 
     @include mob {
-      gap: 20px;
+      gap: 22px;
+    }
+  }
+
+  #first-step {
+    @include tab {
+      .start__input {
+        order: 0;
+        &:nth-child(2) {
+          order: 2;
+        }
+        &:nth-child(3) {
+          order: 4;
+        }
+        &:nth-child(4) {
+          order: 1;
+        }
+        &:nth-child(5) {
+          order: 3;
+        }
+      }
+
+      .start__button {
+        order: 5;
+      }
+
+      @include mob {
+        .start__input {
+          order: 1;
+          &:nth-child(2) {
+            order: 2;
+          }
+          &:nth-child(3) {
+            order: 3;
+          }
+          &:nth-child(4) {
+            order: 4;
+          }
+          &:nth-child(5) {
+            order: 5;
+          }
+        }
+
+        .start__button {
+          order: 6;
+        }
+      }
+    }
+  }
+
+  #second-step {
+    @include tab {
+      .start__input {
+        order: 0;
+        &:nth-child(2) {
+          order: 2;
+          margin-top: -21px;
+        }
+      }
+
+      .start__captcha {
+        order: 1;
+      }
+
+      .start__captcha-input {
+        order: 4;
+      }
+
+      .start__actions {
+        order: 3;
+      }
+
+      .start__checkbox {
+        order: 6;
+      }
+
+      @include mob {
+        .start__input {
+          order: 1;
+          &:nth-child(2) {
+            order: 2;
+            margin-top: 0;
+          }
+        }
+
+        .start__captcha {
+          order: 3;
+        }
+
+        .start__captcha-input {
+          order: 4;
+        }
+
+        .start__actions {
+          order: 5;
+        }
+
+        .start__checkbox {
+          order: 6;
+        }
+      }
     }
   }
 
   &__input {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     font-weight: 500;
     font-size: 14px;
 
@@ -92,13 +195,24 @@
 
     input {
       background-color: $l-yellow;
-      padding: 16px 8px;
+      color: $olive;
+      font-weight: 500;
+      padding: 14px 8px;
       border-radius: 6px;
       width: 320px;
       transition: 0.3s;
 
       @include tab {
+        width: 102%;
+      }
+
+      @include mob {
         width: 100%;
+      }
+
+      &::placeholder {
+        color: $olive;
+        font-weight: 500;
       }
 
       &:hover {
@@ -134,6 +248,12 @@
     }
 
     &--next {
+      margin-top: 20.5px;
+
+      @include tab {
+        margin-top: 24px;
+      }
+
       @include mob {
         margin-top: 20px;
       }
@@ -141,37 +261,76 @@
 
     &--prev {
       background-color: $l-gray;
+
+      @include tab {
+        padding: 16px 7px;
+      }
+
+      @include mob {
+        padding: 16px 13px;
+      }
     }
   }
 
   &__captcha-input {
+    label {
+      gap: 9px;
+      width: 100%;
+    }
+
+    @include tab {
+      width: 46%;
+      input {
+        width: 100%;
+      }
+    }
+
     @include mob {
       width: 100%;
+      margin-top: -4px;
     }
   }
 
   &__captcha {
+    display: flex;
+    justify-content: space-between;
     font-family: "RubikMarkerHatch", "Arial", sans-serif;
     font-weight: 400;
     font-size: 44px;
     text-align: center;
     color: $l-yellow;
-    padding: 33px;
+    padding: 37px 33px;
     background-color: $m-gray;
     border-radius: 12px;
 
+    @include tab {
+      flex-grow: 1;
+      padding: 38px 19px;
+    }
+
     @include mob {
       width: 100%;
-      padding: 21px 13px;
+      max-width: 320px;
+      margin: 0 auto;
+      padding: 38px 13px;
     }
   }
 
   &__actions {
     display: flex;
     gap: 9px;
+    margin-top: 18px;
+
+    @include tab {
+      position: relative;
+      top: 22px;
+      flex-grow: 1;
+      margin-top: 0;
+    }
 
     @include mob {
       width: 100%;
+      top: 0;
     }
   }
 
@@ -181,11 +340,19 @@
     font-family: "PTSans", "Arial", sans-serif;
     font-weight: 400;
     font-size: 14px;
+    line-height: 19px;
     max-width: 250px;
     padding-left: 30px;
 
+    @include tab {
+      position: relative;
+      top: 21px;
+    }
+
     @include mob {
       max-width: 100%;
+      top: 0;
+      margin-top: -3px;
     }
 
     label::before {
