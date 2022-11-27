@@ -3,6 +3,7 @@
   background-position: center 2px;
   background-repeat: no-repeat;
   padding-block: 202px 200px;
+  background-color: $m-yellow;
 
   @include tab {
     background-image: url("/public/img/photo/bgr-2-tab.png");
